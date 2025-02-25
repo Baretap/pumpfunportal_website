@@ -99,16 +99,28 @@
             .emoji { font-size: 1.5em; }
             .token-info { font-size: 0.9em; }
         }
+        .navigation {
+            margin: 10px 0;
+            font-size: 1em;
+        }
+        .navigation a {
+            color: #ff0000;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+        .navigation a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
     <header>PumpFun 🌟</header>
-<div style="margin: 10px;">
-    <a href="/wallet" style="color: #ff0000; text-decoration: none; font-size: 1em;">Oma Lompakko 💰</a> | 
-    <a href="/trade" style="color: #ff0000; text-decoration: none; font-size: 1em;">Kauppa 💸</a>
-</div>
-
     <div id="container">
+        <div class="navigation">
+            <a href="/wallet">Oma Lompakko 💰</a> | 
+            <a href="/trade">Kauppa 💸</a> | 
+            <a href="/create">Luo Token 🎟️</a>
+        </div>
         <h1>Reaaliaikaiset Tapahtumat 🚀</h1>
         <p class="warning">⚠️ Käytä vain yhtä WebSocket-yhteyttä!</p>
         <div id="events"></div>
