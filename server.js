@@ -92,6 +92,22 @@ const server = http.createServer(async (req, res) => {
             res.writeHead(404);
             res.end('Wallet-sivua ei löydy palvelimelta');
         }
+    } else if (parsedUrl.pathname === '/trade' && req.method === 'GET') {
+        if (fs.existsSync('trade.html')) {
+            res.writeHead(200, { 'Content-Type': 'text/html' });
+            fs.createReadStream('trade.html').pipe(res);
+        } else {
+            res.writeHead(404);
+            res.end('Trade-sivua ei löydy palvelimelta');
+        }
+    } else if (parsedUrl.pathname === '/create' && req.method === 'GET') {
+        if (fs.existsSync('create.html')) {
+            res.writeHead(200, { 'Content-Type': 'text/html' });
+            fs.createReadStream('create.html').pipe(res);
+        } else {
+            res.writeHead(404);
+            res.end('Create-sivua ei löydy palvelimelta');
+        }
     } else if (parsedUrl.pathname === '/user' && req.method === 'GET') {
         const email = parsedUrl.query.email;
         const user = users.find(u => (Array.isArray(u.email) ? u.email[0] : u.email) === email);
