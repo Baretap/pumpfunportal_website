@@ -5,81 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PumpFun - Kauppa</title>
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: #000000;
-            color: #ffffff;
-            text-align: center;
-            overflow-x: hidden;
-        }
-        header {
-            background-color: #ffff00;
-            color: #000000;
-            padding: 15px 0;
-            font-size: 1.8em;
-            font-weight: bold;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-        #container {
-            padding: 20px;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        h1 {
-            font-size: 1.5em;
-            margin: 10px 0;
-            color: #ffff00;
-            text-shadow: 1px 1px 3px #ff0000;
-        }
-        .form-section {
-            background: linear-gradient(135deg, #1a1a1a, #333333);
-            border: 3px solid #ffff00;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 20px 0;
-            box-shadow: 0 0 15px rgba(255, 255, 0, 0.5);
-        }
-        select, input[type="text"], input[type="number"] {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ffff00;
-            border-radius: 5px;
-            background-color: #ffffff;
-            color: #000000;
-            font-size: 1em;
-        }
-        button {
-            background-color: #ff0000;
-            color: #ffffff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.1em;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        button:hover {
-            background-color: #cc0000;
-        }
-        .message {
-            color: #ff0000;
-            font-weight: bold;
-            margin-top: 10px;
-        }
-        #result {
-            margin-top: 20px;
-            font-size: 1em;
-            word-break: break-all;
-        }
-        @media (max-width: 600px) {
-            header { font-size: 1.4em; padding: 10px; }
-            #container { padding: 10px; }
-            .form-section { padding: 15px; }
-            select, input, button { font-size: 0.9em; }
-        }
+        body { margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #000000; color: #ffffff; text-align: center; overflow-x: hidden; }
+        header { background-color: #ffff00; color: #000000; padding: 15px 0; font-size: 1.8em; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        #container { padding: 20px; max-width: 600px; margin: 0 auto; }
+        h1 { font-size: 1.5em; margin: 10px 0; color: #ffff00; text-shadow: 1px 1px 3px #ff0000; }
+        .form-section { background: linear-gradient(135deg, #1a1a1a, #333333); border: 3px solid #ffff00; border-radius: 10px; padding: 20px; margin: 20px 0; box-shadow: 0 0 15px rgba(255,255,0,0.5); }
+        select, input[type="text"], input[type="number"] { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ffff00; border-radius: 5px; background-color: #ffffff; color: #000000; font-size: 1em; }
+        button { background-color: #ff0000; color: #ffffff; padding: 10px 20px; border: none; border-radius: 5px; font-size: 1.1em; cursor: pointer; transition: background-color 0.3s; }
+        button:hover { background-color: #cc0000; }
+        .message { color: #ff0000; font-weight: bold; margin-top: 10px; }
+        #result { margin-top: 20px; font-size: 1em; word-break: break-all; }
+        @media (max-width: 600px) { header { font-size: 1.4em; padding: 10px; } #container { padding: 10px; } .form-section { padding: 15px; } select, input, button { font-size: 0.9em; } }
     </style>
 </head>
 <body>
@@ -88,23 +24,13 @@
         <h1>Kauppa 💸</h1>
         <div class="form-section">
             <form id="trade-form">
-                <select name="action" required>
-                    <option value="buy">Osta</option>
-                    <option value="sell">Myy</option>
-                </select>
+                <select name="action" required><option value="buy">Osta</option><option value="sell">Myy</option></select>
                 <input type="text" name="mint" placeholder="Tokenin CA (esim. 123...xyz)" required>
                 <input type="number" name="amount" placeholder="Määrä (SOL tai tokenit)" step="0.01" required>
-                <select name="denominatedInSol" required>
-                    <option value="true">SOL</option>
-                    <option value="false">Tokenit</option>
-                </select>
+                <select name="denominatedInSol" required><option value="true">SOL</option><option value="false">Tokenit</option></select>
                 <input type="number" name="slippage" placeholder="Slippage (%)" step="1" value="10" required>
                 <input type="number" name="priorityFee" placeholder="Priority Fee (SOL)" step="0.00001" value="0.00005" required>
-                <select name="pool" required>
-                    <option value="pump">Pump</option>
-                    <option value="raydium">Raydium</option>
-                    <option value="auto">Auto</option>
-                </select>
+                <select name="pool" required><option value="pump">Pump</option><option value="raydium">Raydium</option><option value="auto">Auto</option></select>
                 <button type="submit">Suorita Kauppa ⚡</button>
             </form>
             <div id="message" class="message"></div>
