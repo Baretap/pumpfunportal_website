@@ -1,0 +1,34 @@
+[
+  {
+    "username": [
+      "Admin"
+    ],
+    "email": [
+      "timitirkkonen@hotmail.com"
+    ],
+    "password": [
+      "admin"
+    ],
+    "wallet": {
+      "publicKey": "N/A",
+      "privateKey": "5HY1Ln6AqMKMG2W2ikczE1fk4QyfmcyAFySd4RNV6NS8QfytrP2xjkW3EgVd58g1XDr3uJtUZW9Kaio1p69GGTjN",
+      "apiKey": "emu6patmanw72ctkf0v4jvata9w4ec26dxbmam2d8gtmuuja9wvmew3ff8vprjjkexhkedkb8n9pmpbndxmnjd3b6d3m4uj5chn7jk268x9q8w3ha5h7antpanb4yxuaex9p4xubcwykucrrmac9r91mk6xa89gnp8v23e091d7cn38b5ajptaq65b4mtkj85h72u2mdx0kuf8"
+    }
+  },
+  {
+    "username": [
+      "Admin"
+    ],
+    "email": [
+      "timitirkkonen@hotmail.com"
+    ],
+    "password": [
+      "admin"
+    ],
+    "wallet": {
+      "publicKey": "N/A",
+      "privateKey": "66AyDoztNjB2PSQH9H56N2SJevBeHyKq3wouGUMUCxouu23eLgjao99oPmmpavtphJnL6rw1X9wiH3iqxp3Jyvat",
+      "apiKey": "6t0q4c31dnj2pt1gdcv6je369hx5jvar65a4adbbegv7mnttdxmmwtkre9p2yv9n94v62maadmt54wk5etb6jx1m9wumcma3e5jp8u2r5dummjk7dxrq6xj7e5jqjh378n7n4g9rewykuah676dk3atp36h1fb1n50uan5wand4etbp85vqcgjk8d4qgphqad33cx3adh8kuf8"
+    }
+  }
+]

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PumpFun - Lompakko</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        header {
+            background-color: #ffff00;
+            color: #000000;
+            padding: 15px 0;
+            font-size: 1.8em;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        #container {
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 1.5em;
+            margin: 10px 0;
+            color: #ffff00;
+            text-shadow: 1px 1px 3px #ff0000;
+        }
+        .wallet-info {
+            background: linear-gradient(135deg, #1a1a1a, #333333);
+            border: 3px solid #ffff00;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 20px;
+            text-align: left;
+            box-shadow: 0 0 15px rgba(255, 255, 0, 0.5);
+        }
+        .wallet-info p {
+            margin: 10px 0;
+            font-size: 1em;
+            word-break: break-all;
+        }
+        .wallet-info strong {
+            color: #ffff00;
+        }
+        .copy-btn {
+            background-color: #ff0000;
+            color: #ffffff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9em;
+            margin-left: 10px;
+            transition: background-color 0.3s;
+        }
+        .copy-btn:hover {
+            background-color: #cc0000;
+        }
+        .warning {
+            color: #ff0000;
+            font-weight: bold;
+            margin: 10px 0;
+            background-color: rgba(255, 0, 0, 0.1);
+            padding: 5px;
+            border-radius: 5px;
+        }
+        #balance {
+            margin-top: 20px;
+            font-size: 1.1em;
+        }
+        @media (max-width: 600px) {
+            header { font-size: 1.4em; padding: 10px; }
+            #container { padding: 10px; }
+            .wallet-info { padding: 10px; font-size: 0.9em; }
+            .copy-btn { font-size: 0.8em; padding: 4px 8px; }
+        }
+    </style>
+</head>
+<body>
+    <header>PumpFun 🌟</header>
+    <div id="container">
+        <h1>Oma Lompakko 💰</h1>
+        <div class="wallet-info" id="wallet-details">
+            <p><strong>Käyttäjänimi:</strong> <span id="username"></span></p>
+            <p><strong>Sähköposti:</strong> <span id="email"></span></p>
+            <p><strong>Julkinen avain:</strong> <span id="public-key"></span> <button class="copy-btn" data-target="public-key">Kopioi 📋</button></p>
+            <p><strong>Yksityinen avain:</strong> <span id="private-key"></span> <button class="copy-btn" data-target="private-key">Kopioi 📋</button></p>
+            <p><strong>API-avain:</strong> <span id="api-key"></span> <button class="copy-btn" data-target="api-key">Kopioi 📋</button></p>
+            <p class="warning">⚠️ Säilytä yksityinen avain ja API-avain turvallisesti!</p>
+        </div>
+        <div id="balance">Saldo: Ladataan...</div>
+    </div>
+    <script src="client.js"></script>
+</body>
+</html>
